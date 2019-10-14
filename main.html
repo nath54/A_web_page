@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Petit blog sur l'espace</title>
+        <style>
+
+@keyframes bodyan {
+  0%   {color:red; }
+  25%  {color:yellow; }
+  50%  {color:white; }
+  75%  {color:green; }
+  100% {color:red; }
+}
+
+
+@keyframes masuperanimation {
+    0% { transform: translateX(0px); }
+    20% { transform: translateX(100px); }
+    40% { transform: translateX(200px); }
+    60% { transform: translateX(200px); }
+    80% { transform: translateX(100px); }
+    100% { transform: translateX(0px); }
+}            
+    
+@-webkit-keyframes rotating {
+    from{ -webkit-transform: rotate(0deg); }
+    to{ -webkit-transform: rotate(360deg); }
+}
+
+@keyframes rot3d{
+    from{ transform: rotateY(0deg); }
+    to{ transform: rotateY(360deg); }
+}
+            
+body{
+    text-align:center;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BLUE_STEREO_3D_Time_for_Space_Wiggle.gif/742px-BLUE_STEREO_3D_Time_for_Space_Wiggle.gif');
+    font-size:30px;
+    color:white;
+    animation-name:bodyan;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    perspective: 800px;
+    perspective-origin: top left;
+}
+
+img{
+    width:300px;
+    height:300px;
+}
+table,td,tr{
+    border:2px solid;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+h1{
+    -webkit-animation: rotating 3s linear infinite;
+}
+
+ol,ul,li{
+    animation: masuperanimation 3s linear infinite; /* On utilise "ma super animation" définie plus tôt */
+}
+
+table{
+    animation: rot3d 3s linear infinite;
+}
+            
+        </style>
+    </head>
+    <body>
+        <h1>L'ESPACE</h1>
+        <ul>
+            <li><a href="https://jupyter-poincare.org/user/nathan-riggs/view/Semaine7/page_web/main.html"><p>Lien sur cette page</p></a></li>
+        </ul>
+        <p>Une liste avec des liens sur l'espace : </p>
+        <ol>
+            <li><a href="https://www.nasa.gov/"><p>Le site de la nasa</p></a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Univers"><p>Qu'est ce que l'univers</p></a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Galaxie"><p>Qu'est ce qu'une galaxie</p></a></li>
+        </ol>
+        <p>Voici des images trop stylées sur l'espace : </p>
+        <table>
+            <tr>
+                <td> <img src="https://data.photofunky.net/output/image/5/e/1/4/5e14f8/photofunky.gif"> </td>
+                <td> <img src="http://cyblog.fr/geekgif/wp-content/uploads/2019/01/galaxy_250.gif"> </td>
+                <td> <img src="http://ekladata.com/BALh0CjrnhI36ZLK3SK8T2Mo0gY.gif"> </td>
+            </tr>
+            <tr>
+                <td> <img src="https://i.pinimg.com/originals/88/ea/d2/88ead271505c3d6de0ab0b1c6857d2c7.gif"> </td>
+                <td> <img src="https://i.pinimg.com/originals/b3/8b/d2/b38bd22f9fa158487a536eb5f64abfff.gif"> </td>
+                <td> <img src="https://i.pinimg.com/originals/cc/81/9a/cc819a4746569ab62e2ab462cf66f2e3.gif"> </td>
+            </tr>
+            <tr>
+                <td> <img src="http://cdn130.picsart.com/289443677001201.gif"> </td>
+                <td> <img src="https://www.caminteresse.fr/content/uploads/2015/08/terre-soleil.gif"> </td>
+                <td> <img src="http://www.bertrand-wysocki.com/img/portfolio/space-opera-odyssey/header.gif"> </td>
+            </tr>
+                <td> <img src="https://thumbs.gfycat.com/SparklingUnfitArcherfish-small.gif"> </td>
+                <td> <img src="https://fr.ubergizmo.com/wp-content/uploads/2014/03/espace.gif"> </td>
+                <td> <img src="https://cdn.popscience.fr/mVQAJR/un-mysterieux-pulsar-envoie-des-emissions-etranges-dans-l-espace.jpg"> </td>
+            <tr>
+                <td> <img src="https://thumbs.gfycat.com/GlisteningAcrobaticIcelandgull-max-1mb.gif"> </td>
+                <td> <img src="http://sandy5767.e-monsite.com/medias/album/images/Light-space.gif"> </td>
+                <td> <img src="https://data.photofunky.net/output/image/b/1/1/f/b11f5b/photofunky.gif"> </td>
+            </tr>
+            <tr>
+                <td> <img src="https://media0.giphy.com/media/Dmx71pmiddTkA/giphy.gif"> </td>
+                <td> <img src="https://risibank.fr/cache/stickers/d1106/110686-full.gif"> </td>
+                <td> <img src="https://thumbs.gfycat.com/CompetentUntriedAvocet-small.gif"> </td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
