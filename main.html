@@ -31,6 +31,11 @@
     from{ transform: rotateY(0deg); }
     to{ transform: rotateY(360deg); }
 }
+
+@keyframes rot3d2{
+    from{ transform: rotateX(0deg); }
+    to{ transform: rotateX(360deg); }
+}
             
 body{
     text-align:center;
@@ -63,9 +68,13 @@ ol,ul,li{
 }
 
 table{
-    animation: rot3d 10s linear infinite;
+    animation: rot3d 15s linear infinite;
 }
-            
+
+.r2{
+    animation:rot3d2 15s linear infinite;
+}
+
         </style>
     </head>
     <body>
@@ -79,7 +88,7 @@ table{
             <li><a href="https://fr.wikipedia.org/wiki/Univers"><p>Qu'est ce que l'univers</p></a></li>
             <li><a href="https://fr.wikipedia.org/wiki/Galaxie"><p>Qu'est ce qu'une galaxie</p></a></li>
         </ol>
-        <p>Voici des images trop stylées sur l'espace : </p>
+        <p class="r2">Voici des images trop stylées sur l'espace : </p>
         <table>
             <tr>
                 <td> <img src="https://data.photofunky.net/output/image/5/e/1/4/5e14f8/photofunky.gif"> </td>
