@@ -2,23 +2,36 @@
     <head>
         <meta charset="UTF-8">
         <title>Petit blog sur l'espace</title>
+        <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
         <style>
-
 @keyframes bodyan {
-  0%   {color:red; }
-  25%  {color:yellow; }
-  50%  {color:white; }
-  75%  {color:green; }
-  100% {color:red; }
+  0%   {color:red; border-color:red; }
+  25%  {color:yellow; border-color:yellow; }
+  50%  {color:white; border-color:white; }
+  75%  {color:green; border-color:green; }
+  100% {color:red; border-color:red; }
 }
-
-
+@keyframes artan1 {
+  0%   {background-color:rgb(0,0,0); }
+  25%  {background-color:rgb(0,0,50); }
+  50%  {background-color:rgb(0,50,50); }
+  75%  {background-color:rgb(0,50,0); }
+  100% {background-color:rgb(0,20,20); }
+}
+@keyframes artan2 {
+  0%   {background-color:rgb(20,20,20); }
+  25%  {background-color:rgb(40,40,40); }
+  50%  {background-color:rgb(40,40,70); }
+  75%  {background-color:rgb(40,40,100); }
+  100% {background-color:rgb(30,30,30); }
+}
+            
 @keyframes masuperanimation {
     0% { transform: translateX(0px); }
-    20% { transform: translateX(100px); }
-    40% { transform: translateX(200px); }
-    60% { transform: translateX(200px); }
-    80% { transform: translateX(100px); }
+    20% { transform: translateX(300px); }
+    40% { transform: translateX(700px); }
+    60% { transform: translateX(700px); }
+    80% { transform: translateX(300px); }
     100% { transform: translateX(0px); }
 }            
     
@@ -26,27 +39,31 @@
     from{ -webkit-transform: rotate(0deg); }
     to{ -webkit-transform: rotate(360deg); }
 }
-
 @keyframes rot3d{
     from{ transform: rotateY(0deg); }
     to{ transform: rotateY(360deg); }
 }
-
 @keyframes rot3d2{
     from{ transform: rotateX(0deg); }
     to{ transform: rotateX(360deg); }
 }
             
 body{
+    font-family: 'Audiowide';
     text-align:center;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/BLUE_STEREO_3D_Time_for_Space_Wiggle.gif/742px-BLUE_STEREO_3D_Time_for_Space_Wiggle.gif');
+    background-image:url("http://ekladata.com/QyKNUjrt2x2FPbGFr2yIDDlU_mw.gif");
+    background-repeat:repeat;
+    /*background-size: 100%;*/
+    width:100%;
     font-size:30px;
     color:white;
-    animation-name:bodyan;
-    animation-duration:3s;
-    animation-iteration-count: infinite;
-    perspective: 800px;
+    animation: bodyan 3s linear infinite;
+    perspective: 5000px;
     perspective-origin: top left;
+}
+h1{ font-size:100px; }
+li{
+    text-align:left;
 }
 
 img{
@@ -57,24 +74,85 @@ table,td,tr{
     border:2px solid;
     margin-left:auto;
     margin-right:auto;
+    margin-top:100px;
+    margin-bottom:100px;
 }
-
 h1{
-    -webkit-animation: rotating 3s linear infinite;
+    -webkit-animation: rotating 5s linear infinite;
 }
-
 ol,ul,li{
-    animation: masuperanimation 3s linear infinite; /* On utilise "ma super animation" définie plus tôt */
+    animation: masuperanimation 40s linear infinite; /* On utilise "ma super animation" définie plus tôt */
 }
-
-table{
+td{
     animation: rot3d 15s linear infinite;
 }
-
 .r2{
     animation:rot3d2 15s linear infinite;
 }
 
+a{
+    color: #ffffff; /* couleur blanche */
+}
+a:visited{ color:#eeeeee: }
+a:hover,a:focus{ color:rgb(150,200,175): }
+
+.art1{
+    border:2px solid black;
+    background-color:rgb(0,0,50);
+    border-radius : 5px;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+    animation: artan1 8s linear infinite;
+}
+            
+.art2{
+    border:2px solid black;
+    background-color:rgb(0,0,150);
+    border-radius : 5px;
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+    animation: artan2 8s linear infinite;
+}
+aside {
+    width: 40%;
+    padding-left: .5rem;
+    margin-left: .5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+}
+
+aside > p {
+    margin: .5rem;
+}
+blockquote {
+    margin: 0;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+blockquote p {
+    padding: 15px;
+    background: rgb(100,100,100);
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+hr{
+    animation: bodyan 3s linear infinite;
+}
+            
         </style>
     </head>
     <body>
@@ -84,10 +162,11 @@ table{
         </ul>
         <p>Une liste avec des liens sur l'espace : </p>
         <ol>
-            <li><a href="https://www.nasa.gov/"><p>Le site de la nasa</p></a></li>
+            <li><a href="https://www.nasa.gov/"><p>Le site de la <abbr title="National Aeronautics and Space Administration">NASA</abbr></p></a></li>
             <li><a href="https://fr.wikipedia.org/wiki/Univers"><p>Qu'est ce que l'univers</p></a></li>
             <li><a href="https://fr.wikipedia.org/wiki/Galaxie"><p>Qu'est ce qu'une galaxie</p></a></li>
         </ol>
+        <hr>
         <p class="r2">Voici des images trop stylées sur l'espace : </p>
         <table>
             <tr>
@@ -120,5 +199,57 @@ table{
             </tr>
             
         </table>
+        <hr>
+        <address>
+            <p>Mon adresse email : </p><a href="mailto:cerisara.nathan@gmail.com">cerisara.nathan@gmail.com</a><br>
+        </address>
+        <hr>
+        <article class="art1">
+            <h2>Des dates importantes :</h2>
+            <article class="art2">
+                <h3>Le 4 octobre 1957</h3>
+                <p>lancement du premier satellite Spoutnik par l'URSS.</p>
+            </article>
+            <article class="art2">
+                <h3>Le 3 novembre 1957 </h3>
+                <p>premier être vivant dans l'espace, la chienne Laïka, à bord de Spoutnik 2.</p>
+            </article>
+            <article class="art2">
+                <h3>Le 12 avril 1961</h3>
+                <p>le Soviétique Youri Gagarine est le premier homme dans l'espace.</p>
+            </article>
+            <article class="art2">
+                <h3>Le 18 mars 1965</h3>
+                <p>le Soviétique Alexeï Leonov est le premier homme à réaliser une sortie dans l'espace.</p>
+            </article>
+            <article class="art2">
+                <h3>Le 21 juillet 1969 </h3>
+                <p>l'Américain Neil Armstrong est le premier homme à marcher sur la Lune.</p>
+            </article>
+            <article class="art2">
+                <h3>Le 20 novembre 1998</h3>
+                <p> mise sur orbite du premier élément de la Station spatiale internationale.</p>
+            </article>
+            <article class="art2">
+                <h3>Le 14 janvier 2005</h3>
+                <p>la sonde Huygens se pose sur Titan, un satellite de Saturne.</p>
+            </article>
+        </article>
+        <hr>
+        <hgroup>
+            <blockquote cite="https://fr.wikipedia.org/wiki/Neil_Armstrong">
+                <p>C'est un petit pas pour l'homme mais un bond de géant pour l'humanité.</p>
+                <footer>—Neil Amstrong<cite> - une citation célèbre </cite></footer>
+            </blockquote>
+            <blockquote cite="https://fr.wikipedia.org/wiki/Neil_Armstrong">
+                <p>Les pilotes se moquent de marcher. Ce qui les motive, c'est de pouvoir voler.</p>
+                <footer>—Neil Amstrong<cite> - une deuxième citation célèbre </cite></footer>
+            </blockquote>
+        </hgroup>
+        <figure>
+          <img style="width:150px; height:105px" src="https://img-4.linternaute.com/EwaSW-F9qkHdbrX-jdsMusm8yxM=/1240x/smart/a278d1821aa94e81bd75b87d06499c48/ccmcms-linternaute/11419033.jpg"  alt="Neil Amstrong">
+          <figcaption>Neil amstrong</figcaption>
+        </figure>
+        <hr>
     </body>
 </html>
