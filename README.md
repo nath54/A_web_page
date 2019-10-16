@@ -1,4 +1,4 @@
-# A_strange_web_page
+# A_web_page
 
-I had to do a web page in NSI, so I did this [web page](https://nath54.github.io/A_strange_web_page/main.html)
+This is a web page about space [web page](https://nath54.github.io/A_strange_web_page/main.html), I did it for fun, so it's not complete, I put it on github just for hosting.
 
